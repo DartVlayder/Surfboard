@@ -1,0 +1,22 @@
+.feautures {
+    display: flex;    
+}
+.feautures__item {
+    margin-right: 33px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.feauture {
+    display: flex;
+}
+.feauture__icon {
+    width: 45px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+}
+.feauture__text {
+    font-size: 16px;
+    max-width: 90px;
+}

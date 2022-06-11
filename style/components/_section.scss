@@ -1,0 +1,28 @@
+.section {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--font--color--white {
+        color: #fff;
+
+        .section__title {
+            color: inherit;
+        }
+    }
+}
+
+.section__title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 13px;
+    text-align: center;
+    color: #292929;
+    text-transform: uppercase;
+}
+
+.section--map {
+    background: url("../../img/img/map.png") center top/cover no-repeat;
+}
