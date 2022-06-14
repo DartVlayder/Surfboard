@@ -3,23 +3,23 @@
 }
 .benefits__item {
     flex: 1;
-    margin: 0 3%;
+    padding: 0 3%;
     position: relative;
 
     &:before {
         content: url("../../img/icons/separator.svg");
         position: absolute;
-        top: 50px;
-        right: -28px;
+        top: 53px;
+        right: 0;
         transform: translateX(50%);
     }
 
     &:first-child {
-        margin-left: 0;
+        padding-left: 0;
     }
 
     &:last-child {
-        margin-right: 0;
+        padding-right: 0;
 
         &::before {
             display: none;
