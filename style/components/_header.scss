@@ -3,13 +3,19 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    &__logo {
+        width: rem(60px);
+        height: rem(50px);
+        fill: #fff;
+    }
+
     @include tablets {
         height: rem(91px);
         background-color: #1968B1;
         display: flex;
         justify-content: space-between;
         align-items:center;
-        padding: 0 5%;
+        padding: 0 2%;
     }
 }
 
@@ -73,4 +79,10 @@
     &__icon {
         flex-shrink: 0;
     }
+}
+
+.phone-number__icon-elem {
+    fill: #fff;
+    width: rem(12px);
+    height: rem(15px);
 }

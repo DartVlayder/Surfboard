@@ -11,12 +11,18 @@
     display: flex;
 }
 .feauture__icon {
-    width: rem(45px);
     margin-right: rem(7px);
     display: flex;
     align-items: center;
 }
 .feauture__text {
     font-size: rem(16px);
-    max-width: rem(90px);
+    max-width: 
+    rem(90px);
+}
+
+.feauture__icon-elem {
+    width: rem(45px);
+    height: rem(45px);
+    fill: #fff;
 }
