@@ -1,13 +1,17 @@
 .headline {
     text-align: center;
-    padding-bottom: 49px;
+    padding-bottom: rem(49px);
 }
 
 .headline__title {
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
     text-transform: uppercase;
 }
 
 .headline__subtitle {
     padding: 0 27%;
+
+    @include phones {
+        padding: 0 6%;
+    }
 }

@@ -2,7 +2,7 @@
     display: flex;    
 }
 .feautures__item {
-    margin-right: 33px;
+    margin-right: rem(33px);
     &:last-child {
         margin-right: 0;
     }
@@ -11,12 +11,12 @@
     display: flex;
 }
 .feauture__icon {
-    width: 45px;
-    margin-right: 7px;
+    width: rem(45px);
+    margin-right: rem(7px);
     display: flex;
     align-items: center;
 }
 .feauture__text {
-    font-size: 16px;
-    max-width: 90px;
+    font-size: rem(16px);
+    max-width: rem(90px);
 }
