@@ -73,3 +73,11 @@
         justify-content: center;
     }
 }
+
+.input-error {
+    border-color: red;
+}
+
+.form__input.input-error {
+    border-color: red;
+}

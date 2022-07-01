@@ -1,0 +1,46 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: none;
+} 
+
+.modal__container {
+    padding: 35px 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.modal__content {
+    text-align: center;
+}
+
+.app-close-modal {
+    margin-top: 20px;
+}
+
+.modal__wrapper {
+    height: 176px;
+    width: 309px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fancybox-stage {
+    .fancybox-content {
+        background: none;
+    }
+}
+
+.error-modal {
+    color: red;
+}

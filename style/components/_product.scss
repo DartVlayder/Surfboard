@@ -1,5 +1,7 @@
 .product-section {
     background: #F8FAF9;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .product-slider {
@@ -14,15 +16,8 @@
 }
 .product-slider {
     display: flex;
+    justify-content: space-evenly;
 }
-.product-slider__arrows {
-    flex-shrink: 0;
-    &--prev {
-    }
-    &--next {
-    }
-}
-
 .product__container {
     display: flex;
         @include tablets {       
@@ -66,7 +61,7 @@
 
 .product__compound:hover .product__dropdown {
     display: block;
-    right: 98px;
+    right: 72px;;
 }
 
 .product__dropdown {
@@ -187,5 +182,15 @@
 }
 
 .product-slider__arrows--next, .product-slider__arrows--prev  {
-    background: #F8FAF9;
+    background: none;
+}
+
+.product-slider {
+    position: relative;
+
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
 }

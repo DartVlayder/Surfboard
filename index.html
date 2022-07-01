@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surfboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./style/main.css">
 </head>
     <body>
@@ -136,7 +138,8 @@
                                 <h3 class="benefit__title">Unique</h3>
                                 <div class="benefit__desc">
                                     <p>
-                                        Вы станете обладателем уникального серфборда. Доска будет выполнена по вашему уникальному дизайну.                                 </p>
+                                        Вы станете обладателем уникального серфборда. Доска будет выполнена по вашему уникальному дизайну.
+                                    </p>
                                 </div>
                             </div>
                         </li>
@@ -255,6 +258,109 @@
                                         </div>
                                     </div>
                                 </li>
+                                <li class="product__item product">
+                                    <div class="product__container">
+                                        <div class="product__col">
+                                            <div class="product__img-wrapper">
+                                                <img src="./img/products/product2.png" alt="Доска">
+                                            </div>
+                                        </div>
+                                        <div class="product__col">
+                                            <div class="products__ingredients">
+                                                <div class="product__compound">
+                                                    <img src="./img/options/options.svg" alt="Стрелки" class="product__compound-img">
+                                                    <div class="product__compound-descr">
+                                                        Параметры
+                                                    </div>
+                                                    <div class="product__dropdown">
+                                                        <ul class="product__dropdown__menu">
+                                                            <li class="product__dropdown__item">
+                                                                <div class="product__dropdown__img-wrapper">
+                                                                    <img src="./img/options/length.svg" alt="Длина доски" class="product__dropdown__img">
+                                                                </div>
+                                                                <div class="product__dropdown__description">
+                                                                    Длина доски
+                                                                </div>
+                                                                <div class="product__dropdown__parameter">
+                                                                    от 1,5 м
+                                                                </div>
+                                                            </li>
+                                                            <li class="product__dropdown__item">
+                                                                <div class="product__dropdown__img-wrapper">
+                                                                    <img src="./img/options/width.svg" alt="Ширина доски" class="product__dropdown__img">
+                                                                </div>
+                                                                <div class="product__dropdown__description">
+                                                                    Ширина доски
+                                                                </div>
+                                                                <div class="product__dropdown__parameter">
+                                                                    от 30 см
+                                                                </div>
+                                                            </li>
+                                                            <li class="product__dropdown__item">
+                                                                <div class="product__dropdown__img-wrapper">
+                                                                    <img src="./img/options/thickness.svg" alt="Толщина доски" class="product__dropdown__img">
+                                                                </div>
+                                                                <div class="product__dropdown__description">
+                                                                    Толщина
+                                                                </div>
+                                                                <div class="product__dropdown__parameter">
+                                                                    8 см
+                                                                </div>
+                                                            </li>
+                                                            <li class="product__dropdown__item">
+                                                                <div class="product__dropdown__img-wrapper">
+                                                                    <img src="./img/options/clocks.svg" alt="Часы" class="product__dropdown__img">
+                                                                </div>
+                                                                <div class="product__dropdown__description">
+                                                                    Срок службы
+                                                                </div>
+                                                                <div class="product__dropdown__parameter">
+                                                                    5 лет
+                                                                </div>
+                                                            </li>
+                                                            <li class="product__dropdown__item">
+                                                                <div class="product__dropdown__img-wrapper">
+                                                                    <img src="./img/options/scales.svg" alt="Вес доски" class="product__dropdown__img">
+                                                                </div>
+                                                                <div class="product__dropdown__description">
+                                                                   Вес
+                                                                </div>
+                                                                <div class="product__dropdown__parameter">
+                                                                    7-8 кг
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product__title">
+                                                ШОРТБОРД
+                                            </div>
+                                            <div class="product__main__content">
+                                                <div class="product__subtitle">
+                                                    Самые быстрые доски для профессионалов. Размеры шортбордов позволяют быстро набирать скорость, делать различные трюки на волне, включая резкие повороты и развороты, флоатеры (проезды по самому гребню волны), различные прыжки с вращениями или без, а также катание 
+                                                    в трубах.
+                                                </div>
+                                                <div class="product__parameters">
+                                                    <div class="product__length">
+                                                        Длина доски
+                                                        <span>от 1,5 метров</span>
+                                                    </div>
+                                                    <div class="product__width">
+                                                        Ширина доски
+                                                        <br><span>от 30 сантиметров</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__price">
+                                                    <div class="product__sum">
+                                                        12000 ₽
+                                                    </div>
+                                                    <a href="#" class="button product__button ">ЗАКАЗАТЬ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                             <div class="arrow__wrapper">
                                 <button href="#" class="product-slider__arrows--next">
@@ -265,16 +371,188 @@
                     </div>
                 </section>
 
+                <section class="section team--section">
+                    <div class="container">
+                        <h2 class="team__title-main">
+                            КОМАНДА
+                        </h2>
+                        <ul class="team__list team__list--version--desktop">
+                            <li class="team__item">
+                                <div class="team__member">
+                                    <img src="./img/avatars/avatar1.png" alt="avatar" class="team__avatar">
+                                </div>
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Борис фёдорович
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__dropdown--title">
+                                            Главный технолог
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Отвечает за материалы и разработку досок
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__member">
+                                    <img src="./img/avatars/avatar2.png" alt="avatar" class="team__avatar">
+                                </div>
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Ольга Невзорова
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__dropdown--title">
+                                            Дизайнер
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Создает дизайн серфбордов
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__member">
+                                    <img src="./img/avatars/avatar3.png" alt="avatar" class="team__avatar">
+                                </div>
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Ингвар Нильсон
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__dropdown--title">
+                                            Спортсмен
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Участвует в разработке серфбордов
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__member">
+                                    <img src="./img/avatars/avatar4.png" alt="avatar" class="team__avatar">
+                                </div>
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Екатерина Иванова
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__dropdown--title">
+                                            Тестировщик
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Отвечает за разработку новых продуктов
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="team__list team__list--version--phones">
+                            <li class="team__item">
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Борис фёдорович
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__member">
+                                            <img src="./img/avatars/avatar1.png" alt="avatar" class="team__avatar">
+                                        </div>
+                                        <div class="team__dropdown--title">
+                                            Главный технолог
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Отвечает за материалы и разработку досок
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Ольга Невзорова
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__member">
+                                            <img src="./img/avatars/avatar2.png" alt="avatar" class="team__avatar">
+                                        </div>
+                                        <div class="team__dropdown--title">
+                                            Дизайнер
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Создает дизайн серфбордов
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Ингвар Нильсон
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                        <div class="team__member">
+                                            <img src="./img/avatars/avatar3.png" alt="avatar" class="team__avatar">
+                                        </div>
+                                        <div class="team__dropdown--title">
+                                            Спортсмен
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Участвует в разработке серфбордов
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <button type="button" class="team__button">
+                                    <div class="team__title">
+                                        Екатерина Иванова
+                                    </div>
+                                </button>
+                                <div class="team__content">
+                                    <div class="team__content--block">
+                                    <div class="team__member">
+                                        <img src="./img/avatars/avatar4.png" alt="avatar" class="team__avatar">
+                                    </div>
+                                        <div class="team__dropdown--title">
+                                            Тестировщик
+                                        </div>
+                                        <div class="team__dropdown--subtitle">
+                                            Отвечает за разработку новых продуктов
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
                 <section class="section">
                     <div class="container">
                         <h2 class="section__title">Отзывы</h2>
                         <div class="reviews">
-                            <div class="reviews__display">
-                                <div class="reviews__display-inner">
+                            <ul class="reviews__display" data-linked-with="one">
+                                <li class="reviews__display-inner reviews__display-inner--active" data-linked-with="one">
                                     <div class="reviews__avatar">
                                         <img src="./img/reviews/avatar1.png" alt="avatar1" class="reviews__avatar-img">
                                     </div>
-                                    <article class="reviews__content">
+                                    <artidcle class="reviews__content">
                                         <h3 class="reviews__title">Лучший дизайн</h3>
                                         <div class="reviews__text">
                                             <p>
@@ -282,22 +560,50 @@
                                             </p>
                                         </div>
                                         <div class="reviews__author"> Ольга Макарова</div>
+                                    </artidcle>
+                                </li>
+                                <li class="reviews__display-inner" data-linked-with="two">
+                                    <div class="reviews__avatar">
+                                        <img src="./img/reviews/avatar2.png" alt="avatar1" class="reviews__avatar-img">
+                                    </div>
+                                    <article class="reviews__content">
+                                        <h3 class="reviews__title">Нереальная скорость</h3>
+                                        <div class="reviews__text">
+                                            <p>
+                                                Я занимаюсь профессиональным спортом. Доверил изготовление доски для соревнований ребятам из Surfboard и не пожалел: 1 место на соревнованиях. Нереальная скорость, устойчивая, удобная и легкая: всё что нужно для победы на соревнованиях!                                   
+                                            </p>
+                                        </div>
+                                        <div class="reviews__author"> Марк Брюлов</div>
                                     </article>
-                                </div>
-                            </div>
+                                </li>
+                                <li class="reviews__display-inner" data-linked-with="three">
+                                    <div class="reviews__avatar">
+                                        <img src="./img/reviews/avatar3.png" alt="avatar1" class="reviews__avatar-img">
+                                    </div>
+                                    <article class="reviews__content">
+                                        <h3 class="reviews__title">Устойчивость и безопасность</h3>
+                                        <div class="reviews__text">
+                                            <p>
+                                                Я заказывал доски для своих детей. Мне было важно, чтобы они были устойчивые, так как безопасность детей на первом месте. Доски были изготовлены по индивидуальным замерам с учетом роста и веса каждого ребенка. Теперь дети катаются и им нравится!                                      
+                                            </p>
+                                        </div>
+                                        <div class="reviews__author">Василий Поперечный</div>
+                                    </article>
+                                </li>
+                            </ul>
                             <ul class="reviews__switcher">
                                 <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-                                    <a href="#" class="interactive-avatar__link">
+                                    <a href="#" class="interactive-avatar__link" data-open="one">
                                         <img src="./img/reviews/avatar1.png" alt="avatar1" class="interactive-avatar__img">
                                     </a>
                                 </li>
                                 <li class="reviews__switcher-item interactive-avatar">
-                                    <a href="#" class="interactive-avatar__link">
+                                    <a href="#" class="interactive-avatar__link" data-open="two">
                                         <img src="./img/reviews/avatar2.png" alt="avatar2" class="interactive-avatar__img">
                                     </a>
                                 </li>
                                 <li class="reviews__switcher-item interactive-avatar">
-                                    <a href="#" class="interactive-avatar__link">
+                                    <a href="#" class="interactive-avatar__link" data-open="three">
                                         <img src="./img/reviews/avatar3.png" alt="avatar3" class="interactive-avatar__img">
                                     </a>
                                 </li>
@@ -310,31 +616,32 @@
                     <div class="container">
                         <h2 class="section__title">Закажите доску</h2>
                         <form class="form">
+                            <input type="hidden" name="to" value="somewhere@mail.com">
                             <div class="form__col">
                                 <div class="form__row">
                                     <label class="form__block">
                                         <div class="form__title">Имя</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="name" class="form__input">
                                     </label>
                                     <label class="form__block">
                                         <div class="form__title">Телефон</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="phone" class="form__input">
                                     </label>
                                 </div>
                                 <div class="form__row">
                                     <label class="form__block">
                                         <div class="form__title">Улица</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="street" class="form__input">
                                     </label>
                                 </div>
                                 <div class="form__row">
                                     <label class="form__block">
                                         <div class="form__title">Дом</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="home" class="form__input">
                                     </label>
                                     <label class="form__block">
                                         <div class="form__title">Корпус</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="part" class="form__input">
                                     </label>
                                     <label class="form__block">
                                         <div class="form__title">Квартира</div>
@@ -350,7 +657,7 @@
                                 <div class="form__row">
                                     <label class="form__block">
                                         <div class="form__title">Комментарий</div>
-                                        <textarea class="form__input form__input--textarea"></textarea>
+                                        <textarea class="form__input form__input--textarea" name="comment"></textarea>
                                     </label>
                                 </div>
                                 <div class="form__controls">
@@ -378,6 +685,18 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal__container">
+                            <div class="modal__wrapper">
+                                <div class="modal__content">
+                                    Сообщение отправлено
+                                </div>
+                                <div class="modal__button-container">
+                                    <a href="#" class="button app-close-modal">ЗАКРЫТЬ</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -476,7 +795,40 @@
                 </ul>
             </nav>
         </div>
+        <nav class="fixed-menu">
+            <ul class="fixed-menu__list">
+                <li class="fixed-menu__item fixed-menu__item--active">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+                <li class="fixed-menu__item">
+                    <a href="" class="fixed-menu__link"></a>
+                </li>
+            </ul>
+        </nav>
         <script src="./jquery-3.6.0.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <script src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     </body>
 </html>

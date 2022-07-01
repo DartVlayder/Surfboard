@@ -1,6 +1,7 @@
 .reviews__display {
     background: #F8FAF9;
     padding: rem(42px);
+    min-height: rem(348px);
 
     @include tablets {
         padding: rem(35px);
@@ -9,12 +10,26 @@
 
 .reviews__display-inner {
     display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
 
     @include tablets {
         flex-direction: column;
         text-align: center;
         align-items: center;
     }
+}
+
+.reviews__display-inner--active {
+        pointer-events: unset;
+        position: static;
+        opacity: 1;
+        visibility: visible;
 }
 
 .reviews__avatar {
