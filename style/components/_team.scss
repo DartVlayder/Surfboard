@@ -32,9 +32,11 @@
     width: rem(220px);
     height: rem(290px);
 }
+.team__member {
+    margin-bottom: rem(21px);
+}
 .team__title {
     display: flex;
-    margin-top: rem(21px);
     align-items: center;
     font-weight: 700;
     margin-right: rem(4px);
@@ -71,6 +73,7 @@
     overflow: hidden;
     position: absolute;
     top: 100%;
+    transition: 0.3s;
 }
 .team__button {
     background: #fff;

@@ -90,7 +90,15 @@ $('.team__title').click(e => {
     }
 })
 
+/* let slides = document.querySelectorAll('.reviews__switcher .reviews__switcher-item');
+let currentSlide = 0;
+let slideInterval = setInterval(nextSlide,2000);
 
+function nextSlide() {
+    slides[currentSlide].className = 'team__item';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'interactive-avatar--active';
+} */
 
 
 
