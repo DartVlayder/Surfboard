@@ -42,6 +42,9 @@
     margin-right: rem(4px);
     font-size: rem(21px);
     background: #fff;
+    @include tablets {
+        margin-bottom: rem(25px);
+    }
 }
 .team__title::after {
     content: "";
