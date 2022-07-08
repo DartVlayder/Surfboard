@@ -277,6 +277,7 @@ let eventsInit = () => {
         const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
         const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
 
+
         $(".player__playback-button").css({
             left: `${newButtonPositionPercent}%`
         });
@@ -287,6 +288,7 @@ let eventsInit = () => {
         player.playVideo();
     })
 }
+
 
 const formatTime = timeSec => {
     const roundTime = Math.round(timeSec);
@@ -358,9 +360,175 @@ function onYouTubeIframeAPIReady() {
         showinfo: 0,
         rel: 0,
         autoplay: 0,
-        modestbranding: 0
+        modestbranding: 0,
     }
   });
 }
 
+
+
 eventsInit();
+
+//products-menu 
+
+const musereWidht = item => {
+    let reqItemWidht = 0;
+    const screenWidht = $(window).width();
+    const container = item.closest(".products-menu")
+    const titleBlocks = container.find(".products-menu__title")
+    const titlesWidht = titleBlocks.width() * titleBlocks.length;
+
+    const textContainer = item.find(".products-menu__container");
+    const paddingLeft = parseInt(textContainer.css("padding-left"));
+    const paddingRight = parseInt(textContainer.css("padding-right")); 
+ 
+    const isMobile = window.matchMedia("(max-widht: 768px)").matches;
+
+    if (isMobile) {
+        reqItemWidht =  screenWidht - titlesWidht;
+    } else {
+        reqItemWidht = 500;
+    }
+
+    return {
+        container: reqItemWidht,
+        textContainer: reqItemWidht - paddingLeft - paddingRight
+    }
+
+}
+
+const closeEveryItemInContainer = container => {
+    const items = container.find(".products-menu__item");
+    const content = container.find(".products-menu__content");
+
+    items.removeClass("active");
+    content.width(0); 
+}
+
+const openMenuItem = item => {
+    const hiddenContent = item.find(".products-menu__content");
+    const reqWidht = musereWidht(item);
+    const textBlock = item.find(".products-menu__container")
+
+    item.addClass("active");
+    hiddenContent.width(reqWidht.container)
+    textBlock.width(reqWidht.textContainer)
+}
+$(".products-menu__title").on("click", e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+    const item = $this.closest(".products-menu__item");
+    const itemOpened = item.hasClass("active");
+    const container = $this.closest(".products-menu")
+
+    if (itemOpened) {
+        closeEveryItemInContainer(container);
+    } else {
+        closeEveryItemInContainer(container);
+        openMenuItem(item);
+    }
+})
+
+$(".products-menu__close").on("click", e => {
+    e.preventDefault()
+
+    closeEveryItemInContainer($('.products-menu'))
+})
+
+// scroll
+
+const sections = $("section");
+const display = $(".maincontent");
+
+let inScroll = false;
+
+sections.first().addClass("active");
+
+const performTransition = (sectionEq) => {
+
+    if(inScroll === false) {
+        inScroll = true;
+        const position = sectionEq * -100;
+    
+        const currentSection = sections.eq(sectionEq);
+        const menuTheme = currentSection.attr("data-sidemenu-theme");
+        const sideMenu = $(".fixed-menu");
+
+        if (menuTheme === "black") {
+            sideMenu.addClass("fixed-menu--shadowed");
+        } else {
+            sideMenu.removeClass("fixed-menu--shadowed");
+        } 
+
+        display.css({
+            transform: `translateY(${position}%)`
+        });
+    
+        sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+
+        setTimeout(() => {
+            inScroll = false;
+
+            sideMenu
+                .find(".fixed-menu__item")
+                .eq(sectionEq)
+                .addClass("fixed-menu__item--active")    
+                .siblings()
+                .removeClass("fixed-menu__item--active");
+        }, 1300);
+    }
+}
+
+const scrollVieport = direction => {
+    const activeSection = sections.filter(".active");
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === "next" && nextSection.length) {
+        performTransition(nextSection.index())
+    }
+
+    if (direction === "prev" && prevSection.length) {
+        performTransition(prevSection.index())
+    }
+}
+
+$(window).on("wheel", e => {
+    const deltaY = e.originalEvent.deltaY;
+
+    if (deltaY > 0) {
+        scrollVieport("next")
+    }
+
+    if (deltaY < 0) {
+        scrollVieport("prev")
+    }
+})
+
+$(window).on("keydown", e => {
+
+    const tagName = e.target.tagName.toLowerCase();
+    
+    if (tagName !== "input" && tagName !== "textarea") {
+        switch (e.keyCode) {
+            case 38:
+                scrollVieport("prev")
+                break;
+    
+            case 40:
+                scrollVieport("next")
+                break;
+        }
+    }
+})
+
+$("[data-scroll-to]").click(e => {
+    e.preventDefault 
+
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+    const reqSection = $(`[data-section-id=${target}]`)
+
+    performTransition(reqSection.index());
+})

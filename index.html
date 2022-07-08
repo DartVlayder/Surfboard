@@ -12,7 +12,7 @@
     <body>
         <div class="wrapper">
             <div class="maincontent">
-                <section class="hero"> 
+                <section data-sidemenu-theme="white" data-section-id="hero" class="hero"> 
                     <div class="container header__container">
                         <header class="header">
                             <svg class="header__logo">
@@ -20,13 +20,13 @@
                             </svg>
                             <nav class="menu">
                                 <ul class="menu__list">
-                                    <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Серфборды</a></li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Меню</a></li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
-                                    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="benefits" class="menu__link">О нас</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="product" class="menu__link">Серфборды</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="team" class="menu__link">Команда</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="products" class="menu__link">Меню</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="reviews" class="menu__link">Отзывы</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="player" class="menu__link">Как мы работаем</a></li>
+                                    <li class="menu__item"><a href="#" data-scroll-to="map" class="menu__link">Контакты</a></li>
                                 </ul>
                             </nav>
                                 <a href="tel:+78009039090" class="phone-number header__phone-number">
@@ -46,7 +46,7 @@
                         <div class="hero__title-section">
                             <h1 class="hero__main-title">Профессиональные доски для серфинга</h1>
                             <div class="hero__title-desc">Самый большой выбор серфбордов в мире</div>
-                            <a href="#" class="button">ЗАКАЗАТЬ</a>
+                            <a href="#" class="button" data-scroll-to="order">ЗАКАЗАТЬ</a>
                         </div>
                         <div class="hero__icons-section">
                             <ul class="feautures">
@@ -85,7 +85,7 @@
                     </div>
                 </section>
 
-                <section class="section benefits__section">
+                <section data-sidemenu-theme="black" data-section-id="benefits" class="section benefits__section">
                     <div class="container">
                         <div class="headline">
                             <h2 class="section__title headline__title">почему Surfboard?</h2>
@@ -147,7 +147,7 @@
                 </div>
                 </section>
                 
-                <section class="section product-section"> 
+                <section data-sidemenu-theme="black" data-section-id="product" class="section product-section"> 
                     <div class="container">
                         <div class="product-slider">
                                 <div class="arrow__wrapper">
@@ -252,7 +252,7 @@
                                                     <div class="product__sum">
                                                         7000 ₽
                                                     </div>
-                                                    <a href="#" class="button product__button ">ЗАКАЗАТЬ</a>
+                                                    <a href="#" class="button product__button">ЗАКАЗАТЬ</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -371,7 +371,7 @@
                     </div>
                 </section>
 
-                <section class="section team--section">
+                <section data-sidemenu-theme="black" data-section-id="team" class="section team--section">
                     <div class="container">
                         <h2 class="team__title-main">
                             КОМАНДА
@@ -543,7 +543,58 @@
                     </div>
                 </section>
 
-                <section class="section">
+                <section data-sidemenu-theme="white" data-section-id="products" class="section products-menu-section">
+                    <h2 class="section__title products-menu-section__title">МЕНЮ</h2>
+                    <ul class="products-menu">
+                        <li class="products-menu__item">
+                            <a href="#" class="products-menu__title products-menu__title-bg1">
+                                <div class="products-menu__title-board">Лонгборды</div>
+                            </a>
+                            <div class="products-menu__content">
+                                <div class="products-menu__container">
+                                    <button class="products-menu__close">
+                                        <img src="./img/icons/close.svg" alt="крестик" class="product__close">
+                                    </button>
+                                    <div class="products-menu__content-text">
+                                        Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-menu__item">
+                            <a href="#" class="products-menu__title products-menu__title-bg2">
+                                <div class="products-menu__title-board">Шортборды</div>
+                            </a>
+                            <div class="products-menu__content">
+                                <div class="products-menu__container">
+                                    <button class="products-menu__close">
+                                        <img src="./img/icons/close.svg" alt="крестик" class="product__close">
+                                    </button>
+                                    <div class="products-menu__content-text">
+                                        Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-menu__item">
+                            <a href="#" class="products-menu__title products-menu__title-bg3">
+                                <div class="products-menu__title-board">Софттопы</div>
+                            </a>
+                            <div class="products-menu__content">
+                                <div class="products-menu__container">
+                                    <button class="products-menu__close">
+                                        <img src="./img/icons/close.svg" alt="крестик" class="product__close">
+                                    </button>
+                                    <div class="products-menu__content-text">
+                                        Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section data-sidemenu-theme="black" data-section-id="reviews" class="section">
                     <div class="container">
                         <h2 class="section__title">Отзывы</h2>
                         <div class="reviews">
@@ -612,7 +663,7 @@
                     </div>
                 </section>
 
-                <section class="section player-section">
+                <section data-sidemenu-theme="black" data-section-id="player" class="section player-section">
                     <div class="container">
                       <h2 class="section__title">Как мы работаем</h2>
                       <div class="player-section__container">
@@ -626,6 +677,9 @@
                             <div class="player__playback">
                               <button class="player__playback-button"></button>
                             </div>
+                            <div class="player__volumebar">
+                                <button class="volume"></button>
+                              </div>
                             <div class="player__duration">
                               <span class="player__duration-completed">0:00</span> :
                               <span class="player__duration-estimate">0:00</span>
@@ -636,7 +690,7 @@
                     </div>
                   </section>
 
-                <section class="section order-section section--font--color--white">
+                <section data-sidemenu-theme="white" data-section-id="order" class="section order-section section--font--color--white">
                     <div class="container">
                         <h2 class="section__title">Закажите доску</h2>
                         <form class="form">
@@ -724,7 +778,7 @@
                     </div>
                 </section>
 
-                <section class="section map-section">
+                <section data-sidemenu-theme="black" data-section-id="map" class="section map-section">
                     <div id="map"></div>
                     <footer class="footer">
                         <div class="container footer__container">
@@ -734,7 +788,9 @@
                                 </div>
                                 <a href="tel:+78009039090" class="phone-number phone-number--theme--dark">
                                     <span class="phone-number__icon">
-                                        <img src="./img/icons/tel.svg" class="phone-number__icon-elem" alt="phone">
+                                        <svg class="phone-number__icon-elem">
+                                            <use xlink:href="./img/sprite.svg#tel"></use>
+                                        </svg>
                                     </span>
                                     <span class="phone-number__text">8 800 903 90 90</span>
                                 </a>
@@ -822,31 +878,31 @@
         <nav class="fixed-menu">
             <ul class="fixed-menu__list">
                 <li class="fixed-menu__item fixed-menu__item--active">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="hero" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="benefits" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="product" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="team" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="products" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="reviews" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="player" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="order" class="fixed-menu__link"></a>
                 </li>
                 <li class="fixed-menu__item">
-                    <a href="" class="fixed-menu__link"></a>
+                    <a href="#" data-scroll-to="map" class="fixed-menu__link"></a>
                 </li>
             </ul>
         </nav>

@@ -4,9 +4,21 @@
     right: 4%;
     z-index: $z-fixed-menu;
 
+    &__shadowed {
+        border-color: #000
+    }
+
     @include tablets {
         display: none;
     }
+}
+
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link {
+    border-color: #000;
+}
+
+.fixed-menu--shadowed .fixed-menu__link::before {
+    background: #000;
 }
 
 .fixed-menu__item {
@@ -17,6 +29,16 @@
             border-color: #fff;
         }
     }
+    :hover {
+        border: rem(1px) solid transparent;
+        border-color: #fff;
+    }
+}
+
+.fixed-menu--shadowed .fixed-menu__link:hover {
+    border: rem(1px) solid transparent;
+    border-color: #000;
+    border-radius: 100%;
 }
 
 .fixed-menu__link {
