@@ -323,6 +323,8 @@ const onPlayerReady = () => {
     }, 1000);
 };
 
+
+
 const onPlayerStateChange = event => {
     /* 
     -1 (воспроизведение видео не начато)
@@ -381,12 +383,14 @@ const musereWidht = (item) => {
 
     const textContainer = item.find(".products-menu__container");
     const paddingLeft = parseInt(textContainer.css("padding-left"));
-    const paddingRight = parseInt(textContainer.css("padding-right")); 
+    const paddingRight = parseInt(textContainer.css("padding-right"));
  
-    const isMobile = window.matchMedia("(max-widht: 768px)").matches;
+    const isTablets = window.matchMedia("(max-width:768px)").matches;
+    /* const isPhones = window.matchMedia("(max-width:480px)").matches; */
 
-    if (isMobile) {
-        reqItemWidht =  screenWidht - titlesWidht;
+
+    if (isTablets) {
+        reqItemWidht = screenWidht - titlesWidht;
     } else {
         reqItemWidht = 500;
     }
@@ -396,7 +400,7 @@ const musereWidht = (item) => {
         textContainer: reqItemWidht - paddingRight - paddingLeft
     }
 
-}
+};
 
 const closeEveryItemInContainer = container => {
     const items = container.find(".products-menu__item");

@@ -8,10 +8,18 @@
         text-transform: uppercase;
     }
     &__container {
-        width: 662px;
-        height: 391px;
+        max-width: rem(662px);
+        max-height: rem(392px);
         position: relative;
         margin: 0 auto;
+        @include tablets {
+            max-width: rem(594px);
+            max-height: rem(391px);
+        }
+        @include phones {
+            max-width: 90%;
+            max-height: rem(233px);
+        }
     }
 }
 .player {
@@ -21,6 +29,9 @@
     height: 100%;
     &__wrapper {
         display: block;
+    }
+    &__elem {
+        width: 100%;
     }
     &__playback:before {
         content:"";
@@ -52,6 +63,14 @@
                
         }
     }
+.player__splash::after {
+    @include tablets {
+        left: 254px;
+    }
+    @include phones {
+        left: 150px;
+    }
+}
     &__controls {
         position: absolute;
         bottom: 0;
@@ -68,6 +87,7 @@
     &__start {
         background: url(../img/icons/playSmall.svg) no-repeat;
         height: 20px;
+        margin-right: 10px;
     }
     &__duration {
         white-space: nowrap;
@@ -77,6 +97,7 @@
         height: 16px;
         width: 446px;
         position: relative;
+        margin-right: 10px;
         &-button {
             position: absolute;
             width: 12px;
@@ -123,21 +144,56 @@
     }
     
 }
-
-.volume {
-    background: url("../../img/icons/sound.svg") no-repeat;
-    height: 16px;
+.sound {
+    display: flex;
+    align-items: center;
     position: relative;
-    &::after {
+
+    &::before {
         content: "";
-        height: 4px;
+        height: 2px;
+        width: 26px;
+        background-color: #ffff;
         position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        background: #626262;
         display: block;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
+        top: 50%;
+        transform: translateY(-50%) rotate(42deg);
+        opacity: 0;
+        transition: opacity .3s;
+        cursor: pointer;
+        left: -4px;
+
+    }
+
+    &.active {
+        &::before {
+            opacity: 1;
+
+        }
+
+        & .duration__length::-webkit-slider-thumb{
+            background: #626262;
+        }
+    }
+
+    &__volume {
+        display: flex;
+        align-items: center;
+        }
+
+    &__btn {
+        background: transparent;
+        border: 0;
+        flex-shrink: 0;
+        margin-right: rem(20px);
+        cursor: pointer;
+        z-index: 2;
+        padding: 0;
+
+    
+
+        @include tablets {
+            margin-right: rem(15px);
+        }
     }
 }

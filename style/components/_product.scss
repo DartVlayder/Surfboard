@@ -62,7 +62,7 @@
 
 .product__compound:hover .product__dropdown {
     display: block;
-    right: 87px;;;
+    right: 72px;
 }
 
 .product__dropdown {
@@ -99,7 +99,7 @@
 .product__col {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
         @include tablets {
             text-align: center;
         }
@@ -160,7 +160,6 @@
 
 
 .products__ingredients {
-    margin-top: rem(14px);
     @include tablets {
         display: none;
     }

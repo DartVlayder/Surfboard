@@ -677,13 +677,18 @@
                             <div class="player__playback">
                               <button class="player__playback-button"></button>
                             </div>
-                            <div class="player__volumebar">
-                                <button class="volume"></button>
-                              </div>
-                            <div class="player__duration">
+                            <div class="sound">
+                                <button class="sound__btn">
+                                    <img src="./img/icons/sound.svg"  class="sound__img" id="sound__img">
+                                </button>
+                                <div class="sound__volume">
+                                    <input type="range" class="duration__length duration__length--other"  min=0 max=100 id="volume">
+                                </div>
+                            </div>
+                            <!-- <div class="player__duration">
                               <span class="player__duration-completed">0:00</span> :
                               <span class="player__duration-estimate">0:00</span>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>
