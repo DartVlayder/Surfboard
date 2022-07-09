@@ -440,88 +440,121 @@ $(".products-menu__close").on("click", e => {
 
 const sections = $("section");
 const display = $(".maincontent");
+const sideMenu = $(".fixed-menu");
+const menuItems = sideMenu.find(".fixed-menu__item")
+
+const mobileDetected = new MobileDetected(window.navigator.userAgent);
+const isMobile = mobileDetected.mobile();
 
 let inScroll = false;
 
 sections.first().addClass("active");
 
-const performTransition = (sectionEq) => {
+const countSectionPosition = sectionEq => {
+    const position = sectionEq * -100;
 
-    if(inScroll === false) {
-        inScroll = true;
-        const position = sectionEq * -100;
-    
-        const currentSection = sections.eq(sectionEq);
-        const menuTheme = currentSection.attr("data-sidemenu-theme");
-        const sideMenu = $(".fixed-menu");
-
-        if (menuTheme === "black") {
-            sideMenu.addClass("fixed-menu--shadowed");
-        } else {
-            sideMenu.removeClass("fixed-menu--shadowed");
-        } 
-
-        display.css({
-            transform: `translateY(${position}%)`
-        });
-    
-        sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
-
-        setTimeout(() => {
-            inScroll = false;
-
-            sideMenu
-                .find(".fixed-menu__item")
-                .eq(sectionEq)
-                .addClass("fixed-menu__item--active")    
-                .siblings()
-                .removeClass("fixed-menu__item--active");
-        }, 1300);
+    if(isNaN(position)) {
+        console.error("переданно не верное значение в countSectionPosition")
+        return 0;
     }
+
+    return position;
 }
 
-const scrollVieport = direction => {
+const changeMenuThemeForSection = (sectionEq) => {
+    const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr("data-sidemenu-theme");
+    const activeClass = "fixed-menu--shadowed";
+
+    if (menuTheme === "black") {
+        sideMenu.addClass(activeClass);
+    } else {
+        sideMenu.removeClass(activeClass);
+    } 
+}
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+    items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass)
+}
+
+const performTransition = (sectionEq) => {
+
+    if (inScroll) return;
+
+    const transitionHover = 1000;
+    const mouseInertionHover = 300;
+
+    inScroll = true;
+
+    const position = countSectionPosition(sectionEq);
+
+    changeMenuThemeForSection(sectionEq);
+
+    display.css({
+        transform: `translateY(${position}%)`
+    });
+
+    resetActiveClassForItem(sections, sectionEq, "active");
+
+    setTimeout(() => {
+        inScroll = false;
+        resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active")
+
+    }, transitionHover + mouseInertionHover);
+}
+
+const vieportScroller = () => {
     const activeSection = sections.filter(".active");
     const nextSection = activeSection.next();
     const prevSection = activeSection.prev();
 
-    if (direction === "next" && nextSection.length) {
-        performTransition(nextSection.index())
-    }
-
-    if (direction === "prev" && prevSection.length) {
-        performTransition(prevSection.index())
+    return {
+        next() {
+            if (nextSection.length) {
+                performTransition(nextSection.index())
+            }
+        },
+        prev() {
+            if (prevSection.length) {
+                performTransition(prevSection.index())
+            }
+        }
     }
 }
 
 $(window).on("wheel", e => {
     const deltaY = e.originalEvent.deltaY;
+    const scroller = vieportScroller();
 
     if (deltaY > 0) {
-        scrollVieport("next")
+        scroller.next();
     }
 
     if (deltaY < 0) {
-        scrollVieport("prev")
+        scroller.prev();
     }
 })
 
 $(window).on("keydown", e => {
 
     const tagName = e.target.tagName.toLowerCase();
+    const userTypeInInputs = tagName == "input" || tagName == "textarea";
+    const scroller = vieportScroller();
     
-    if (tagName !== "input" && tagName !== "textarea") {
+    if (userTypeInInputs) return; 
+
         switch (e.keyCode) {
             case 38:
-                scrollVieport("prev")
+                scroller.prev();
                 break;
     
             case 40:
-                scrollVieport("next")
+                scroller.next();
                 break;
-        }
-    }
+        }   
 })
+
+$(".wrapepr").on("touchmove", e => e.preventDefault());
 
 $("[data-scroll-to]").click(e => {
     e.preventDefault 
@@ -532,3 +565,22 @@ $("[data-scroll-to]").click(e => {
 
     performTransition(reqSection.index());
 })
+
+if (isMobile) {
+    $("body").swipe({
+        swipe: function (event,direction) {
+            const scroller = vieportScroller();
+            let scrollerDirection = "";
+        
+            if (direction === "up") scrollerDirection = "next";
+            if (direction === "down") scrollerDirection = "prev";
+        
+            scroller[scrollerDirection]();
+        }
+    });
+}
+
+
+
+
+ 
