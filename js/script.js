@@ -371,8 +371,9 @@ eventsInit();
 
 //products-menu 
 
-const musereWidht = item => {
+const musereWidht = (item) => {
     let reqItemWidht = 0;
+
     const screenWidht = $(window).width();
     const container = item.closest(".products-menu")
     const titleBlocks = container.find(".products-menu__title")
@@ -392,7 +393,7 @@ const musereWidht = item => {
 
     return {
         container: reqItemWidht,
-        textContainer: reqItemWidht - paddingLeft - paddingRight
+        textContainer: reqItemWidht - paddingRight - paddingLeft
     }
 
 }
@@ -405,7 +406,7 @@ const closeEveryItemInContainer = container => {
     content.width(0); 
 }
 
-const openMenuItem = item => {
+const openMenuItem = (item) => {
     const hiddenContent = item.find(".products-menu__content");
     const reqWidht = musereWidht(item);
     const textBlock = item.find(".products-menu__container")

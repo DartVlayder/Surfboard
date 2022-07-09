@@ -18,6 +18,9 @@
     padding: rem(28px) 0 rem(64px) 0;
 }
 
+.menu__item:hover {
+    text-decoration: underline;
+}
 .hero__title-section {
     width: 46%;
 
