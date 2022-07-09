@@ -443,8 +443,8 @@ const display = $(".maincontent");
 const sideMenu = $(".fixed-menu");
 const menuItems = sideMenu.find(".fixed-menu__item")
 
-const mobileDetected = new MobileDetected(window.navigator.userAgent);
-const isMobile = mobileDetected.mobile();
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
 let inScroll = false;
 
