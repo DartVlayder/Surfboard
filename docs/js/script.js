@@ -367,10 +367,11 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-
-
 eventsInit();
 
+$('.duration__length').on('change', function () {
+    player.setVolume($(this).val());
+});
 //products-menu 
 
 const musereWidht = (item) => {
@@ -584,8 +585,3 @@ if (isMobile) {
         }
     });
 }
-
-
-
-
- 

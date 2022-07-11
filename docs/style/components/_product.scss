@@ -73,7 +73,7 @@
     box-shadow: rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     padding: rem(15px);
-    top: 25px;
+    top: 46px;
     right: -9999px;
     font-weight: 500;
     &__menu {
@@ -99,7 +99,7 @@
 .product__col {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
         @include tablets {
             text-align: center;
         }
